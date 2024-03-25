@@ -1,5 +1,4 @@
 import pybamm
-import matplotlib.pyplot as plt
 
 # pybamm.Exerperiment ->
     # Allows for making an experiment simulation in English

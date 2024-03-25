@@ -19,3 +19,13 @@ gas1.HP = 1.32956e7, 101325 # Joules (J), Pascal (Pa)
 gas1_temp = gas1.T # Shows temperature of gas1
 gas1_enthalpy = gas1.h # Shows enthalpy of gas1
 
+# Setting composition in molar (X) or mass (Y) fractions
+phi = 0.8
+gas1.X = {'CH4':1, 'O2':2/phi, 'N2':2*3.76/phi} # setting fractions in dict format
+# This allows for the temp. & density to be const
+# and only the pressure and other intensive prop. changes
+
+# Specific properties of the gas can be held const. by the 'None'
+gas1.SV = None, 2.1 # changes specific volume while keeping entropy const.
+
+gas1.TPX = None, None, 'CH4:1.0, O2:0.5' # sets mass fractions and keeps temp. and pressure const.
